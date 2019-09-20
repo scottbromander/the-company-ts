@@ -6,7 +6,7 @@ var historyLog_1 = require("./Utils/historyLog");
 var currencyFormatter = require('currency-formatter');
 var Company = /** @class */ (function () {
     function Company(name) {
-        this.INTERVAL_TICK = 5 * 1000;
+        this.INTERVAL_TICK = .005 * 1000;
         this.STARTING_STAFF = 10;
         this.timer = {};
         this.historyLog = new historyLog_1.HistoryLog();
@@ -43,7 +43,7 @@ var Company = /** @class */ (function () {
     Company.prototype.randomEvent = function () {
         var randomChange = randomNumber_1.randomNumber(1, 100);
         switch (randomChange) {
-            case 1:
+            case 1 | 5 | 6 | 7 | 8:
                 this.employees.push(this.createEmployee());
                 // Another option for updating an array...
                 // const updatedEmployeeArray: Employee[] = [

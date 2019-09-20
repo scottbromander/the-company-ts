@@ -3,10 +3,10 @@ import { Company } from './modules/Company';
 
 const app: express.Application = express();
 
-const company: Company = new Company('Meow Meow meow meow');
+const company: Company = new Company('Awesome Company Name');
 
-app.get('/', function(req,res) {
-    res.send('Hail Enhydra!');
+app.get('/', (req,res) => {
+    res.send('Hello!');
 });
 
 app.get('/api/employees', (req,res) => {

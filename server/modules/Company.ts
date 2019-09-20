@@ -6,7 +6,7 @@ const currencyFormatter = require('currency-formatter');
 
 export class Company {
 
-    private readonly INTERVAL_TICK: number = 5 * 1000;
+    private readonly INTERVAL_TICK: number = .005 * 1000;
     private readonly STARTING_STAFF: number = 10;
 
     private timerCount: number;
@@ -60,7 +60,7 @@ export class Company {
     private randomEvent(): void {
         const randomChange = randomNumber(1,100);
         switch(randomChange) {
-            case 1:
+            case 1 | 5 | 6 | 7 | 8:
                 this.employees.push(this.createEmployee());
                 // Another option for updating an array...
                 // const updatedEmployeeArray: Employee[] = [
