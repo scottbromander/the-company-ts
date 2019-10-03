@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var Company_1 = require("./modules/Company");
 var app = express();
-var company = new Company_1.Company('Meow Meow meow meow');
+var company = new Company_1.Company('Awesome Company Name');
 app.get('/', function (req, res) {
-    res.send('Hail Enhydra!');
+    res.send('Hello!');
 });
 app.get('/api/employees', function (req, res) {
     res.send(company.getAllEmployees());
